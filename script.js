@@ -31,15 +31,11 @@ ham.addEventListener("click", () => {
     Array.from(ham.children).map((e) => {
       e.setAttribute("data-expanded", "true");
     });
-    // icon.classList.remove("fa-bars")
-    // icon.classList.add("fa-xmark")
   } else {
     nav.setAttribute("data-visible", "false");
     Array.from(ham.children).map((e) => {
       e.setAttribute("data-expanded", "false");
     });
-    // icon.classList.add("fa-bars")
-    // icon.classList.remove("fa-xmark")
   }
 });
 
@@ -94,12 +90,12 @@ window.addEventListener("scroll", scrollActive);
 
 const projectArray = [
   {
-    title: "Todo List App",
-    techUsed: "HTML, CSS, JS, BOOTSTRAP",
+    title: "iTask - React Todo App",
+    techUsed: "React Js, Tailwind CSS",
     description:
-      "Crafted a sleek and user-friendly todos app using HTML, CSS, JS, and Bootstrap. Seamlessly manage tasks with a stylish interface, offering an efficient and enjoyable task management experience.",
-    githubLink: "",
-    deployLink: "https://hvtodosapp.ccbp.tech/",
+      "Efficient Todo app allows you to add, edit, delete, and mark tasks as completed. Your tasks are saved in the browser's local storage along with created and due dates. Stay organized and manage your tasks effortlessly with this intuitive Todo app.",
+    githubLink: "https://github.com/HarshaVardhanRajuK/Todo-react",
+    deployLink: "https://harshavktodosapp.netlify.app/",
     button: true,
   },
   {
@@ -112,7 +108,7 @@ const projectArray = [
     button: true,
   },
   {
-    title: "Wikipedia Search",
+    title: "Wikipedia Search Website",
     techUsed: "HTML, CSS, JS",
     description:
       "Designed and implemented a Wikipedia search app using HTML, CSS, and JS. Utilized API calls to fetch and display dynamic content, offering a seamless and informative browsing experience for users.",
@@ -143,7 +139,8 @@ function createAndAppendProject(project) {
   let projectItem = document.createElement("div");
   projectItem.classList.add("project-item");
 
-  projectItem.innerHTML = `${project.button
+  projectItem.innerHTML = `${
+    project.button
       ? `<h2>${project.title}</h2>
     <p>
         <span>Technologies Used: </span>${project.techUsed}</p>
@@ -151,30 +148,43 @@ function createAndAppendProject(project) {
         <span>Description:  </span>${project.description}<span class="read-more ">... Read more</span>
     </p>
 
-    <div><button class="btn"><a href="${project.deployLink}" target=_blank style="text-decoration: none;color:white;">view Project<i class="fa-solid fa-angle-right"
-        style="margin-inline: 6px;"></i></a></button></div>`
+    <div style="display: flex; margin-top: 5px; gap: 5px; flex-wrap: wrap;">
+
+      <button class="btn">
+        <a href="${project.deployLink}" target=_blank style="text-decoration: none;color:white;">view Live link
+          <i class="fa-solid fa-angle-right"
+            style="margin-inline: 6px;">
+          </i>
+        </a>
+      </button>
+      <button class="btn">
+        <a href="${project.githubLink}" target=_blank style="text-decoration: none;color:white;">view Github
+          <i class="fa-solid fa-angle-right"
+            style="margin-inline: 6px;">
+          </i>
+        </a>
+      </button>
+
+    </div>`
       : `<h2>More to come</h2>`
-    }`;
+  }`;
 
   return projectItem;
 }
 
 projectArray.forEach((project) => {
   let projectsCont = document.querySelector(".projects-cont");
-  // console.log(projectsCont);
 
   projectsCont.appendChild(createAndAppendProject(project));
 });
 
 let projectItems = Array.from(document.querySelectorAll(".project-item"));
 
-// console.log(projectItems);
 projectItems.forEach((item, i, arr) => {
   let readMoreBtn = item.querySelector(".read-more");
   let projectDesc = item.querySelector(".project-desc");
 
   if (i !== arr.length - 1) {
-    // console.log("this");
     readMoreBtn.addEventListener("click", () => {
       projectDesc.classList.toggle("toggle-ReadMore");
       item.classList.toggle("toggle-ReadMore");
@@ -233,7 +243,6 @@ async function sendData() {
   };
 
   try {
-
     let response = await fetch("https://vercel-node-virid.vercel.app/contact", {
       method: "POST",
       headers: {
@@ -245,11 +254,8 @@ async function sendData() {
     let res = await response.text();
 
     alert(res);
-
   } catch (err) {
-
     alert("failed to send the message");
-    
   }
 }
 

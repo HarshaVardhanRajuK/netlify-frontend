@@ -90,6 +90,14 @@ window.addEventListener("scroll", scrollActive);
 
 const projectArray = [
   {
+    title: "KnowCrypto - Crypto Details App",
+    techUsed: "React Js",
+    description: "Developed by using Context API, axios. Made use of CoinGecko API. Robust and user-friendly website designed to provide real-time insights into the cryptocurrency market. The platform allows users to track the prices, market caps, interactive price change charts offering a comprehensive view of market trends.",
+    githubLink: "https://github.com/HarshaVardhanRajuK/KnowCrypto.git",
+    deployLink: "https://harshavkknowcrypto.netlify.app/",
+    button: true,
+  },
+  {
     title: "iTask - React Todo App",
     techUsed: "React Js, Tailwind CSS",
     description:

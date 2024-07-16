@@ -98,6 +98,23 @@ const projectArray = [
     button: true,
   },
   {
+    title: "EMI Calculator",
+    techUsed: "HTML, CSS, JS",
+    description: "Real time website, developed for a finance firm by knowing their requirements time to time. More than a thousand visitors uptil now with good analytics and speed insights",
+    githubLink: "https://github.com/HarshaVardhanRajuK/EMI-Calculator",
+    deployLink: "https://emi-calculator-omega.vercel.app/",
+    button: true,
+  },
+  {
+    title: "MERN Authentication",
+    techUsed: "React JS, Express JS, MongoDB",
+    description:
+      "Secure Authentication System implemented using MERN stack with forgot-password, reset-password functionality. Logging in with secure cookie system to access the protected routes in the frontend",
+    githubLink: "https://github.com/HarshaVardhanRajuK/MERN-Auth-frontend",
+    deployLink: "https://harshavkmernfrontend.netlify.app/",
+    button: true,
+  },
+  {
     title: "iTask - React Todo App",
     techUsed: "React Js, Tailwind CSS",
     description:
@@ -111,7 +128,7 @@ const projectArray = [
     techUsed: "HTML, CSS, JS",
     description:
       "Replicated the frontend of w3schools.com using HTML, CSS, and JS. Emulated the renowned educational platform's layout and design, providing an interactive and responsive learning environment for web development enthusiasts.",
-    githubLink: "",
+    githubLink: "https://github.com/HarshaVardhanRajuK/W3-Schools-Frontend-Clone",
     deployLink: "https://peaceful-strudel-ebb1cd.netlify.app/",
     button: true,
   },
